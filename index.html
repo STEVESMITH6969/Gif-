@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Garden Party Giveaway Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial Black', Arial, sans-serif;
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-container {
+            width: 1080px;
+            height: 1920px;
+            background: radial-gradient(circle at 30% 20%, #ff6b6b, #4ecdc4, #45b7d1);
+            position: relative;
+            overflow: hidden;
+            transform: scale(0.4);
+            transform-origin: center;
+        }
+
+        /* Animated background elements */
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape1 {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 107, 107, 0.3);
+            top: 10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .shape2 {
+            width: 200px;
+            height: 200px;
+            background: rgba(78, 205, 196, 0.4);
+            top: 30%;
+            right: -5%;
+            animation-delay: 2s;
+        }
+
+        .shape3 {
+            width: 400px;
+            height: 400px;
+            background: rgba(69, 183, 209, 0.2);
+            bottom: 20%;
+            left: -15%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        /* Main content animations */
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 100px 80px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            animation: slideInTop 1s ease-out;
+        }
+
+        .main-title {
+            font-size: 120px;
+            color: white;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+            margin: 0;
+            animation: pulse 2s ease-in-out infinite;
+            line-height: 1;
+        }
+
+        .subtitle {
+            font-size: 60px;
+            color: #FFD700;
+            margin: 20px 0;
+            animation: slideInLeft 1.5s ease-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .giveaway-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 40px;
+            padding: 60px;
+            margin: 80px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            animation: slideInUp 2s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .giveaway-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,215,0,0.3), transparent);
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .prize-text {
+            font-size: 80px;
+            color: #ff6b6b;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: bounce 1s ease-in-out infinite alternate;
+        }
+
+        .rules-text {
+            font-size: 48px;
+            color: #333;
+            line-height: 1.4;
+            margin: 30px 0;
+        }
+
+        .event-details {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 50px;
+            border-radius: 30px;
+            animation: slideInBottom 2.5s ease-out;
+        }
+
+        .event-title {
+            font-size: 72px;
+            margin-bottom: 30px;
+            color: #4ecdc4;
+        }
+
+        .event-info {
+            font-size: 48px;
+            line-height: 1.6;
+        }
+
+        .dj-names {
+            font-size: 36px;
+            color: #FFD700;
+            margin: 20px 0;
+            animation: slideInRight 3s ease-out;
+        }
+
+        .floating-emojis {
+            position: absolute;
+            font-size: 60px;
+            animation: floatEmoji 4s ease-in-out infinite;
+        }
+
+        .emoji1 {
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .emoji2 {
+            top: 25%;
+            right: 15%;
+            animation-delay: 1s;
+        }
+
+        .emoji3 {
+            bottom: 30%;
+            left: 8%;
+            animation-delay: 2s;
+        }
+
+        .emoji4 {
+            bottom: 40%;
+            right: 12%;
+            animation-delay: 3s;
+        }
+
+        @keyframes floatEmoji {
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            25% { transform: translateY(-20px) rotate(5deg) scale(1.1); }
+            50% { transform: translateY(-10px) rotate(-5deg) scale(1.2); }
+            75% { transform: translateY(-30px) rotate(3deg) scale(1.1); }
+        }
+
+        /* Animation keyframes */
+        @keyframes slideInTop {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInBottom {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        /* Mobile responsive scaling */
+        @media (max-width: 768px) {
+            .video-container {
+                transform: scale(0.2);
+            }
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .control-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .control-btn:hover {
+            background: #ff5252;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <!-- Animated background shapes -->
+        <div class="bg-shape shape1"></div>
+        <div class="bg-shape shape2"></div>
+        <div class="bg-shape shape3"></div>
+
+        <!-- Floating emojis -->
+        <div class="floating-emojis emoji1">🎵</div>
+        <div class="floating-emojis emoji2">🍻</div>
+        <div class="floating-emojis emoji3">💃</div>
+        <div class="floating-emojis emoji4">🌿</div>
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="logo-section">
+                <h1 class="main-title">GIVEAWAY</h1>
+                <p class="subtitle">🎉 TIME! 🎉</p>
+            </div>
+
+            <div class="giveaway-box">
+                <div class="prize-text">£20 BAR TAB!</div>
+                <div class="rules-text">
+                    ❤️ LIKE THIS POST<br>
+                    📱 SHARE TO STORY<br>
+                    👥 TAG 2 FRIENDS
+                </div>
+            </div>
+
+            <div class="event-details">
+                <div class="event-title">SECRET GARDEN<br>PARTY II</div>
+                <div class="event-info">
+                    📅 JUNE 21ST • 2PM-LATE<br>
+                    📍 HAYES & BEALE<br>
+                    🎵 HOUSE • DISCO • VIBES
+                </div>
+                <div class="dj-names">
+                    DJ POV • M4CARP • MINKY ERGO<br>
+                    AMURA • TWINSYNC • AJR<br>
+                    DJ SOLAR PLEXUS • LONE PARADISE
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="control-btn" onclick="location.reload()">🔄 Restart Animation</button>
+        <button class="control-btn" onclick="toggleFullscreen()">📱 Fullscreen</button>
+    </div>
+
+    <script>
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Auto-restart animation every 15 seconds for continuous loop
+        setInterval(() => {
+            location.reload();
+        }, 15000);
+    </script>
+</body>
+</html>
